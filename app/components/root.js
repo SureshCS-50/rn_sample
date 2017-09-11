@@ -4,11 +4,6 @@ import {
     View
 } from 'react-native'
 import { Button, Text } from 'native-base'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-const keys = require('./../utils/constants').keys;
-
-import * as rootActions from './../reducers/root/actions'
 
 class Root extends Component {
     constructor(props){
@@ -54,16 +49,4 @@ const styles = StyleSheet.create({
     }
 });
 
-function mapStateToProps(state){
-    return{
-        count: state.root.get(keys.count)
-    }
-}
-
-function mapDispatchToProps(dispatch){
-	return{
-        actions: bindActionCreators({...rootActions}, dispatch)
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Root);
+export default Root;

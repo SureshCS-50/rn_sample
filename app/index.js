@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import Root from './components/root'
+import Root from './containers/root'
 import {store} from './config/configureStore'
 
 class App extends Component {
